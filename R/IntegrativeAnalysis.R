@@ -145,7 +145,7 @@ correlateMatrices <- function(
     featureDF1$matchName <- gsub(".*\\:","",featureDF1$matchName)
   }
   if("before_underscore" %in% tolower(removeFromName1)){
-    featureDF1$matchName <- gsub(".*\\_","",featureDF1$matchName)
+    featureDF1$matchName <- gsub(".*_","",featureDF1$matchName)
   }
 
   featureDF2$matchName <- toupper(featureDF2$name)
@@ -165,7 +165,7 @@ correlateMatrices <- function(
     featureDF2$matchName <- gsub(".*\\:","",featureDF2$matchName)
   }
   if("before_underscore" %in% tolower(removeFromName2)){
-    featureDF2$matchName <- gsub(".*\\_","",featureDF2$matchName)
+    featureDF2$matchName <- gsub(".*_","",featureDF2$matchName)
   }
 
   .logThis(featureDF1, name = "featureDF1", logFile = logFile)
